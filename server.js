@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const app = require("./app");
 const dotenv = require("dotenv");
-const hola= 0;
 
 //Carga de variables de entorno
 dotenv.config({ path: "./config.env" });
