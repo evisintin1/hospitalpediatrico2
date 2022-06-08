@@ -8,7 +8,7 @@ const app = express();
 const myRouter = require("./routes/myRouter");
 const cors = require("cors");
 const session = require('express-session');
-const controllers = require('.controllers/myController');
+const routes = require('./routes/myRouter');
 //Defino el motor de plantillas a utilizar
 app.set("view engine", "ejs");
 //Defino la localización de mis vistas
@@ -28,7 +28,7 @@ app.use(express.json());
 //Configurando archivos estáticos
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
-app.use("controllers/myController.js", controllers);
+app.use("routes/myRouter", routes);
 
 //Agrego un enrutador compatible
 app.use("/", myRouter);
