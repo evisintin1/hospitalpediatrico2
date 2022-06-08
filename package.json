@@ -4,7 +4,7 @@
     "description": "Proyecto con estructura recomendada para comenzar nuevos proyectos con ExpressJs",
     "main": "server.js",
     "scripts": {
-        "start": "node app.js"
+        "start": "node server.js"
     },
     "keywords": [
         "expressJs",
