@@ -10,3 +10,15 @@ router.route("/login").get(adminController.vista).post(adminController.logine);
 router.route("/logout").get(adminController.logout);
 router.route("/subirPost").get(adminController.postear2);
 module.exports = router;
+
+
+router.get("/", async (req, res) => {
+    try {
+      return res.status(200).render("pagina.ejs");
+    } 
+    catch (error) {
+      console.error(error);
+      return res.status(500).send("Server error");
+      
+    }
+  });
